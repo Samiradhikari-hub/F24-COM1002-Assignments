@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .div1 {
+            width: 500px;
+        }
+    </style>
+    <title>Form</title>
+</head>
+
+<body>
+    <form>
+
+        <div style="margin-right: 0;" class="div1">
+            <fieldset style="border:1.5px solid black;padding: 9px; ">
+                <legend> Your details</legend>
+                <div>
+                    <div>
+                        <p>Name:
+                            <input type="text">
+                        </p>
+                    </div>
+                    <div>
+                        <p>Email:
+                            <input type="email">
+                        </p>
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+            <br>
+
+            <fieldset style="border:1.5px solid black;padding: 9px; ">
+                <legend>Your Review</legend>
+                <div>How did you heard about us:
+                    <select id="job">
+                        <option value="google">Google</option>
+                        <option value="google">Magazines</option>
+                        <option value="google">Friends</option>
+                    </select>
+                </div>
+                <br>
+
+                <div>
+                    <label>Would you visit us again:</label>
+                    <br>
+                    <br>
+                    <div>
+                        <input type="radio" id="yes">
+                        <label>Yes</label>
+                        <input type="radio" id="no">
+                        <label>No</label>
+                        <input type="radio" id="Maybe">
+                        <label>Maybe</label>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <label>Comments:</label>
+                    <br>
+                    <br>
+                    <div> <textarea id="comments" rows="3" cols="50"> </textarea></div>
+                </div>
+                <div>
+                    <input type="checkbox" id="sign" checked>Sign me up for email address.
+                </div>
+                <div> <input type="submit" value="Submit review"></div>
+
+            </fieldset>
+
+        </div>
+
+
+    </form>
+</body>
+
+</html>
