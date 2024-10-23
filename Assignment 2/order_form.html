@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Order delicious pizza online from our restaurant.">
+    <meta name="keywords" content="pizza, online order, food delivery">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Pizza Order Form"</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        /* Main section styling */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Heading styles */
+        h2 {
+            text-align: center;
+            color: #d80f0f;
+            margin-bottom: 20px;
+        }
+
+
+        /* Pizza container styling */
+        .pizza-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px auto;
+        }
+
+        /* Pizza card styling */
+        .pizza-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            /* Fixed width for cards */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .pizza-card img {
+            width: 100%;
+            /* Responsive image */
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .pizza-card:hover {
+            transform: scale(1.05);
+            /* Scale effect on hover */
+        }
+
+        /* Form styling */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Submit button styling */
+
+        .submit-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        /* Styling for pizza size radio buttons */
+        .size-options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+        }
+
+        .element {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main section with the order form -->
+    <main>
+        <section class="order-form">
+            <h2>Place Your Pizza Order</h2>
+
+            <form action="#" method="POST">
+                
+        
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Phone number -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <!-- Pizza type (dropdown) -->
+                <div class="form-group">
+                    <label for="pizza-type">Pizza Type</label>
+                    <select id="pizza-type" name="pizza-type" required>
+                        <option value="" disabled selected>Select Pizza Type</option> <!-- Placeholder option -->
+                        <option value="margherita">Margherita</option>
+                        <option value="pepperoni">Pepperoni</option>
+                        <option value="veggie">Veggie</option>
+                    </select>
+                </div>
+
+                <!-- Pizza size (radio buttons) -->
+                <div class="form-group">
+                    <label>Pizza Size:</label>
+                    <div class="size-options">
+                        <div class="element">
+                            <input type="radio" id="small" name="size" value="small" required>
+                            <label for="small">Small</label>
+                        </div>
+                        <div class="element">
+                            <input type="radio" id="medium" name="size" value="medium">
+                            <label for="medium">Medium</label>
+                        </div>
+                        <div class="element">
+                            <input type="radio" id="large" name="size" value="large">
+                            <label for="large">Large</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toppings (checkboxes) -->
+                <div class="form-group">
+                    <label>Toppings:</label>
+                    <input type="checkbox" id="cheese" name="toppings" value="cheese">
+                    <label for="cheese">Extra Cheese</label>
+                    <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+                    <label for="mushrooms">Mushrooms</label>
+                    <input type="checkbox" id="peppers" name="toppings" value="peppers">
+                    <label for="peppers">Bell Peppers</label>
+                    <input type="checkbox" id="olives" name="toppings" value="olives">
+                    <label for="olives">Olives</label>
+                </div>
+
+                <!-- Special instructions (textarea) -->
+                <div class="form-group">
+                    <label for="instructions">Special Instructions:</label>
+                    <textarea id="instructions" name="instructions" rows="4"></textarea>
+                </div>
+
+                <!-- Delivery Address (textarea) -->
+                <div class="form-group">
+                    <label for="address">Delivery address:</label>
+                    <textarea id="address" name="address" rows="2"></textarea>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="submit-btn">Submit Order</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
