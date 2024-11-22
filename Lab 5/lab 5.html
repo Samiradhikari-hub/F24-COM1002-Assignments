@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        input {
+            padding: 5px;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 8px 16px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sum Calculator</h1>
+    <p>Enter a number (N) to calculate the sum of numbers from 1 to N.</p>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateSum() {
+            // Get input from the text field
+            let input = document.getElementById('numberInput').value;
+            let N = parseInt(input);
+
+            // Check if the input is a valid number
+            if (isNaN(N) || N <= 0) {
+                document.getElementById('result').innerText = "Please enter a valid positive number.";
+                return;
+            }
+
+            // Calculate the sum of numbers from 1 to N
+            let sum = 0;
+            for (let i = 1; i <= N; i++) {
+                sum += i;
+            }
+
+            // Display the result dynamically on the web page
+            document.getElementById('result').innerText = `The sum of numbers from 1 to ${N} is: ${sum}`;
+        }
+    </script>
+</body>
+</html>
